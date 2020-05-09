@@ -3,9 +3,11 @@
   <ItemGroup>
     <ClCompile Include="RenderContext.cpp" />
     <ClCompile Include="print.cpp" />
+    <ClCompile Include="Core.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RenderContext.h" />
     <ClInclude Include="print.h" />
+    <ClInclude Include="Core.h" />
   </ItemGroup>
 </Project>
