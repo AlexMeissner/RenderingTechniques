@@ -7,34 +7,34 @@ namespace print
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color);
     }
 
-    Info sInfo;
-    Success sSuccess;
-    Warning sWarning;
-    Error sError;
-    Critical sCritical;
+    Info InfoStream;
+    Success SuccessStream;
+    Warning WarningStream;
+    Error ErrorStream;
+    Critical CriticalStream;
 
     Info info
     {
-        return sInfo;
+        return InfoStream;
     };
 
     Success success
     {
-        return sSuccess;
+        return SuccessStream;
     };
 
     Warning warning
     {
-        return sWarning;
+        return WarningStream;
     };
 
     Error error
     {
-        return sError;
+        return ErrorStream;
     };
 
     Critical critical
     {
-        return sCritical;
+        return CriticalStream;
     };
 }
