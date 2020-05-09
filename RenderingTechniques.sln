@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcxproj", "{CD036145-5492-4CCA-8099-232F1F93CAF9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Grass", "Grass\Grass.vcxproj", "{71892488-C5AF-4AC2-BA47-557D4291C2B8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CD036145-5492-4CCA-8099-232F1F93CAF9} = {CD036145-5492-4CCA-8099-232F1F93CAF9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

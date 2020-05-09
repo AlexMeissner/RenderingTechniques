@@ -2,42 +2,38 @@
 
 namespace print
 {
-    namespace internals
+    void SetConsoleColor(const WORD Color)
     {
-        void SetConsoleColor(ConsoleColor eColor)
-        {
-            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-            SetConsoleTextAttribute(hConsole, eColor.m_iWinColor);
-        }
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color);
     }
 
-    internals::Info sInfo;
-    internals::Success sSuccess;
-    internals::Warning sWarning;
-    internals::Error sError;
-    internals::Critical sCritical;
+    Info sInfo;
+    Success sSuccess;
+    Warning sWarning;
+    Error sError;
+    Critical sCritical;
 
-    internals::Info info
+    Info info
     {
         return sInfo;
     };
 
-    internals::Success success
+    Success success
     {
         return sSuccess;
     };
 
-    internals::Warning warning
+    Warning warning
     {
         return sWarning;
     };
 
-    internals::Error error
+    Error error
     {
         return sError;
     };
 
-    internals::Critical critical
+    Critical critical
     {
         return sCritical;
     };
