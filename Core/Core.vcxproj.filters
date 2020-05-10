@@ -4,10 +4,14 @@
     <ClCompile Include="RenderContext.cpp" />
     <ClCompile Include="print.cpp" />
     <ClCompile Include="Core.cpp" />
+    <ClCompile Include="vbo.cpp" />
+    <ClCompile Include="VAO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RenderContext.h" />
     <ClInclude Include="print.h" />
     <ClInclude Include="Core.h" />
+    <ClInclude Include="vbo.h" />
+    <ClInclude Include="VAO.h" />
   </ItemGroup>
 </Project>

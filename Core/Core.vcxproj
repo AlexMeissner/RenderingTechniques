@@ -103,11 +103,15 @@
     <ClInclude Include="Core.h" />
     <ClInclude Include="print.h" />
     <ClInclude Include="RenderContext.h" />
+    <ClInclude Include="VAO.h" />
+    <ClInclude Include="vbo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="print.cpp" />
     <ClCompile Include="RenderContext.cpp" />
+    <ClCompile Include="VAO.cpp" />
+    <ClCompile Include="vbo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
