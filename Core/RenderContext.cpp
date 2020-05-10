@@ -1,10 +1,6 @@
 #include "RenderContext.h"
 #include "print.h"
 
-#define GLEW_STATIC
-#include <GL/glew.h>
-#include <glfw3.h>
-
 namespace
 {
     void window_resize(GLFWwindow*, int width, int height)

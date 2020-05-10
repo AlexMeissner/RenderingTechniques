@@ -1,8 +1,6 @@
 #pragma once
 
-#include <Windows.h>
-#include <iostream>
-#include <string>
+#include "CommonHeaders.h"
 
 #define info info()
 #define success success()

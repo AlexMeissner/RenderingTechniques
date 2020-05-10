@@ -1,4 +1,4 @@
-#include "vbo.h"
+#include "VBO.h"
 
 using namespace glm;
 

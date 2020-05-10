@@ -100,18 +100,21 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CommonHeaders.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="print.h" />
     <ClInclude Include="RenderContext.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="VAO.h" />
-    <ClInclude Include="vbo.h" />
+    <ClInclude Include="VBO.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="print.cpp" />
     <ClCompile Include="RenderContext.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="VAO.cpp" />
-    <ClCompile Include="vbo.cpp" />
+    <ClCompile Include="VBO.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

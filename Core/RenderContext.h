@@ -1,8 +1,6 @@
 #pragma once
 
-#include <string>
-
-struct GLFWwindow;
+#include "CommonHeaders.h"
 
 class render_context
 {
