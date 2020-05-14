@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RenderContext.h"
+#include "Camera.h"
 
 class shader;
 
@@ -14,6 +15,7 @@ public:
 
 private:
     render_context context;
+    xbox_camera camera;
 
     std::vector<shader*> wachted_shaders;
 };

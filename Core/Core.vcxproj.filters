@@ -7,6 +7,7 @@
     <ClCompile Include="VAO.cpp" />
     <ClCompile Include="VBO.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RenderContext.h" />
@@ -16,5 +17,6 @@
     <ClInclude Include="VBO.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="CommonHeaders.h" />
+    <ClInclude Include="Camera.h" />
   </ItemGroup>
 </Project>

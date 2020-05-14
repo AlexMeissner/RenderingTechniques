@@ -72,3 +72,18 @@ void render_context::end_frame() const
     glfwPollEvents();
     glfwSwapBuffers(window);
 }
+
+glm::vec2 render_context::get_left_analog_stick() const
+{
+    return glm::vec2();
+}
+
+glm::vec2 render_context::get_right_analog_stick() const
+{
+    return glm::vec2();
+}
+
+glm::vec2 render_context::get_digital_pad() const
+{
+    return glm::vec2();
+}
