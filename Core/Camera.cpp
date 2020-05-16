@@ -18,16 +18,15 @@ void xbox_camera::update(const xbox_controller& controller, const float delta_ti
         print::info << "Camera field of view: " << field_of_view << print::endl;
     }
 
-    const float factor = delta_time * speed_modifier;
     const vec3 right = cross(direction, up);
 
-    // [right stick] direction
     const vec2 right_amplitude = controller.get_right_analog_stick();
+    direction = glm::rotate(direction, right_amplitude.x * delta_time * 0.01f, up);
+    direction = glm::rotate(direction, right_amplitude.y * delta_time * 0.01f, right);
 
-    // [left stick] position
     const vec2 left_amplitude = controller.get_left_analog_stick();
-    position += direction * left_amplitude.y * factor;
-    position += right * left_amplitude.x * factor;
+    position += direction * left_amplitude.y * delta_time * speed_modifier;
+    position += right * left_amplitude.x * delta_time * speed_modifier;
 }
 
 mat4 xbox_camera::get_view_projection() const

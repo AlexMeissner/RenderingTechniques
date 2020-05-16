@@ -14,5 +14,6 @@
 #include <glfw3.h>
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
+#include <gtx/rotate_vector.hpp>
 
 namespace fs = std::filesystem;
