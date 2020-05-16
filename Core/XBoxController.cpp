@@ -56,5 +56,32 @@ vec2 xbox_controller::get_right_analog_stick() const
 
 vec2 xbox_controller::get_digital_pad() const
 {
-    return glm::vec2();
+    int count = 0;
+    const unsigned char* buttons = glfwGetJoystickButtons(GLFW_JOYSTICK_1, &count);
+
+    if (count < 13)
+    {
+        return vec2(0.0f, 0.0f);
+    }
+
+    vec2 amplitude(0.0f, 0.0f);
+
+    if (buttons[10])
+    {
+        amplitude.y = 1.0f;
+    }
+    else if (buttons[12])
+    {
+        amplitude.y = -1.0f;
+    }
+    if (buttons[13])
+    {
+        amplitude.x = -1.0f;
+    }
+    else if (buttons[11])
+    {
+        amplitude.x = 1.0f;
+    }
+
+    return amplitude;
 }
