@@ -26,7 +26,7 @@ void core::run(void render_function())
         const float time_delta = static_cast<float>(std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count());
         last_time = now;
 
-        camera.update(context, time_delta);
+        camera.update(context.get_controller(), time_delta);
 
         context.begin_frame();
         render_function();

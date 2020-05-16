@@ -73,17 +73,7 @@ void render_context::end_frame() const
     glfwSwapBuffers(window);
 }
 
-glm::vec2 render_context::get_left_analog_stick() const
+xbox_controller render_context::get_controller() const
 {
-    return glm::vec2();
-}
-
-glm::vec2 render_context::get_right_analog_stick() const
-{
-    return glm::vec2();
-}
-
-glm::vec2 render_context::get_digital_pad() const
-{
-    return glm::vec2();
+    return xbox_controller(window);
 }

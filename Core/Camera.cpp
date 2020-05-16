@@ -2,7 +2,7 @@
 
 using namespace glm;
 
-void xbox_camera::update(const render_context& render_context, const float delta_time)
+void xbox_camera::update(const xbox_controller& controller, const float delta_time)
 {
     delta_time;
     speed_modifier;
@@ -14,6 +14,7 @@ void xbox_camera::update(const render_context& render_context, const float delta
     // [right stick] direction
     // [left stick] position
     // position += direction * delta_time * speed_modifier; // falsch stick nicht drin
+    //controller.get_left_analog_stick();
 }
 
 mat4 xbox_camera::get_view_projection() const

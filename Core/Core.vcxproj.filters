@@ -8,6 +8,7 @@
     <ClCompile Include="VBO.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="XBoxController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RenderContext.h" />
@@ -18,5 +19,6 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="CommonHeaders.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="XBoxController.h" />
   </ItemGroup>
 </Project>

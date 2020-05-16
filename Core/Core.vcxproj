@@ -108,6 +108,7 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="VAO.h" />
     <ClInclude Include="VBO.h" />
+    <ClInclude Include="XBoxController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
@@ -117,6 +118,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="VAO.cpp" />
     <ClCompile Include="VBO.cpp" />
+    <ClCompile Include="XBoxController.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

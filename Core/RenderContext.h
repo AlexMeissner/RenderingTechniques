@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CommonHeaders.h"
+#include "XBoxController.h"
 
 class render_context
 {
@@ -15,9 +16,7 @@ public:
     void begin_frame();
     void end_frame() const;
 
-    glm::vec2 get_left_analog_stick() const;
-    glm::vec2 get_right_analog_stick() const;
-    glm::vec2 get_digital_pad() const;
+    xbox_controller get_controller() const;
 
 private:
     GLFWwindow* window = nullptr;

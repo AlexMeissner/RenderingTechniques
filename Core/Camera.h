@@ -1,12 +1,12 @@
 #pragma once
 
 #include "CommonHeaders.h"
-#include "RenderContext.h"
+#include "XBoxController.h"
 
 class xbox_camera
 {
 public:
-    void update(const render_context& render_context, const float delta_time);
+    void update(const xbox_controller& controller, const float delta_time);
     glm::mat4 get_view_projection() const;
 
 private:
