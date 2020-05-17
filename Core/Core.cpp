@@ -11,7 +11,7 @@ void core::watch(shader& wachted_shader)
     wachted_shaders.push_back(&wachted_shader);
 }
 
-void core::run(void render_function())
+void core::run()
 {
     auto last_time = std::chrono::system_clock::now();
 
@@ -26,10 +26,24 @@ void core::run(void render_function())
         const float time_delta = static_cast<float>(std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count());
         last_time = now;
 
+        update();
         camera.update(context.get_controller(), time_delta);
 
         context.begin_frame();
-        render_function();
+        render();
         context.end_frame();
     }
+}
+
+bool core::initialize()
+{
+    return false;
+}
+
+void core::update()
+{
+}
+
+void core::render()
+{
 }

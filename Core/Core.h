@@ -11,7 +11,11 @@ public:
     core(const std::string& window_title);
 
     void watch(shader& wachted_shader);
-    void run(void render_function());
+    void run();
+
+    virtual bool initialize();
+    virtual void update();
+    virtual void render();
 
 private:
     render_context context;
