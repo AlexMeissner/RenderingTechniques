@@ -10,28 +10,37 @@ grass::grass(const std::string& window_title)
 
 bool grass::initialize()
 {
-    if (!test_shader.load_vertex_shader("W:\\Projects\\Coding\\Super Mario Bros\\SuperMarioBros\\Rendering\\Shader\\Vertex\\TempPass.glsl"))
+    if (!floor_shader.load_vertex_shader("W:\\Projects\\Coding\\RenderingTechniques\\Grass\\Vertex_Floor.glsl"))
     {
         return false;
     }
-    if (!test_shader.load_fragment_shader("W:\\Projects\\Coding\\Super Mario Bros\\SuperMarioBros\\Rendering\\Shader\\Fragment\\TempPass.glsl"))
+    if (!floor_shader.load_fragment_shader("W:\\Projects\\Coding\\RenderingTechniques\\Grass\\Fragment_Floor.glsl"))
     {
         return false;
     }
-    watch(test_shader);
+    watch(floor_shader);
 
-    //std::vector<vec3> vertices;
-    //std::vector<vec3> colors;
-    //std::vector<unsigned int> indices;
-    //
-    //vao floor;
-    //floor.create_vertex_buffer(GL_STATIC_DRAW, vertices);
-    //floor.create_color_buffer(GL_STATIC_DRAW, colors);
-    //floor.create_index_buffer(GL_STATIC_DRAW, indices);
+    const std::vector<vec3> vertices = { vec3(-floor_size, 0.0f, -floor_size), vec3(floor_size, 0.0f, -floor_size), vec3(-floor_size, 0.0f, floor_size), vec3(floor_size, 0.0f, floor_size) };
+    const std::vector<vec3> colors = { vec3(1.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f), vec3(0.0f, 0.0f, 1.0f), vec3(1.0f, 0.0f, 0.0f) };
+    const std::vector<unsigned int> indices = { 0, 1, 2, 1, 2, 3 };
+
+    floor.bind();
+    floor.create_vertex_buffer(GL_STATIC_DRAW, vertices);
+    floor.create_color_buffer(GL_STATIC_DRAW, colors);
+    floor.create_index_buffer(GL_STATIC_DRAW, indices);
+    floor.release();
 
     return true;
 }
 
 void grass::render()
 {
+    floor_shader.bind();
+    floor_shader.set_uniform(floor_shader.get_uniform_location("view_projection"), 1, &camera.get_view_projection()[0][0]);
+
+    floor.bind();
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void*)0);
+    floor.release();
+    
+    floor_shader.release();
 }

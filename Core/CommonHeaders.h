@@ -6,6 +6,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <array>
 #include <chrono>
 #include <unordered_map>
 

@@ -13,5 +13,8 @@ public:
     void render() override;
 
 private:
-    shader test_shader;
+    shader floor_shader;
+    vao floor;
+
+    const float floor_size = 100.0f;
 };

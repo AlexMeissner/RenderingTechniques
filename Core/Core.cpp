@@ -23,7 +23,7 @@ void core::run()
         }
 
         const auto now = std::chrono::system_clock::now();
-        const float time_delta = static_cast<float>(std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count());
+        const float time_delta = std::chrono::duration_cast<std::chrono::microseconds>(now - last_time).count() / 1000.0f;
         last_time = now;
 
         update();

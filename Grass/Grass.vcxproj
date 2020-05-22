@@ -102,6 +102,10 @@
     <ClInclude Include="Grass.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Fragment_Floor.glsl" />
+    <None Include="Vertex_Floor.glsl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

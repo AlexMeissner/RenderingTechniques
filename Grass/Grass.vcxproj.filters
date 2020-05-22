@@ -9,4 +9,17 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Grass.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{98b83be8-2fc1-469c-a024-e14417454b2a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fragment_Floor.glsl">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Vertex_Floor.glsl">
+      <Filter>Shader</Filter>
+    </None>
+  </ItemGroup>
 </Project>

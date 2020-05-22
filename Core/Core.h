@@ -17,9 +17,10 @@ public:
     virtual void update();
     virtual void render();
 
-private:
+protected:
     render_context context;
     xbox_camera camera;
 
+private:
     std::vector<shader*> wachted_shaders;
 };
