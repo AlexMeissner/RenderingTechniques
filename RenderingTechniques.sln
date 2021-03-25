@@ -10,6 +10,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Grass", "Grass\Grass.vcxpro
 		{CD036145-5492-4CCA-8099-232F1F93CAF9} = {CD036145-5492-4CCA-8099-232F1F93CAF9}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RingBuffer", "RingBuffer\RingBuffer.vcxproj", "{55481F0C-1DE0-4753-89CE-959E6F121923}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CD036145-5492-4CCA-8099-232F1F93CAF9} = {CD036145-5492-4CCA-8099-232F1F93CAF9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeightMap", "HeightMap\HeightMap.vcxproj", "{500D3756-3CF1-4D19-BD86-02417476FBDB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CD036145-5492-4CCA-8099-232F1F93CAF9} = {CD036145-5492-4CCA-8099-232F1F93CAF9}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -24,6 +34,14 @@ Global
 		{71892488-C5AF-4AC2-BA47-557D4291C2B8}.Debug|x64.Build.0 = Debug|x64
 		{71892488-C5AF-4AC2-BA47-557D4291C2B8}.Release|x64.ActiveCfg = Release|x64
 		{71892488-C5AF-4AC2-BA47-557D4291C2B8}.Release|x64.Build.0 = Release|x64
+		{55481F0C-1DE0-4753-89CE-959E6F121923}.Debug|x64.ActiveCfg = Debug|x64
+		{55481F0C-1DE0-4753-89CE-959E6F121923}.Debug|x64.Build.0 = Debug|x64
+		{55481F0C-1DE0-4753-89CE-959E6F121923}.Release|x64.ActiveCfg = Release|x64
+		{55481F0C-1DE0-4753-89CE-959E6F121923}.Release|x64.Build.0 = Release|x64
+		{500D3756-3CF1-4D19-BD86-02417476FBDB}.Debug|x64.ActiveCfg = Debug|x64
+		{500D3756-3CF1-4D19-BD86-02417476FBDB}.Debug|x64.Build.0 = Debug|x64
+		{500D3756-3CF1-4D19-BD86-02417476FBDB}.Release|x64.ActiveCfg = Release|x64
+		{500D3756-3CF1-4D19-BD86-02417476FBDB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
