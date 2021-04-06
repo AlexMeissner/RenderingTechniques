@@ -7,6 +7,27 @@ namespace
     {
         glViewport(0, 0, width, height);
     }
+
+    void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+    {
+        if (key == 291 && action == 1)
+        {
+            static GLenum render_mode = GL_FILL;
+
+            if (render_mode == GL_FILL)
+            {
+                print::info << "Enable wireframe render mode" << print::endl;
+                render_mode = GL_LINE;
+            }
+            else
+            {
+                print::info << "Disable wireframe render mode" << print::endl;
+                render_mode = GL_FILL;
+            }
+
+            glPolygonMode(GL_FRONT_AND_BACK, render_mode);
+        }
+    }
 }
 
 render_context::~render_context()
@@ -33,15 +54,22 @@ bool render_context::create(const std::string& window_title)
         glfwMakeContextCurrent(window);
         glfwSetWindowSizeCallback(window, window_resize);
         glfwSwapInterval(0);
+        glfwSetKeyCallback(window, key_callback);
+
+        print::success << "Window creation was successful." << print::endl;
     }
     else
     {
-        print::critical << "Window creation failed.";
+        print::critical << "Window creation failed." << print::endl;
         return false;
     }
 
     glewExperimental = GL_TRUE;
-    glewInit();
+    if (glewInit() != GLEW_OK)
+    {
+        print::critical << "GLEW initialization failed." << print::endl;
+        return false;
+    }
 
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);

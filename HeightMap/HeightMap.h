@@ -3,6 +3,7 @@
 #include "Core.h"
 #include "VAO.h"
 #include "Shader.h"
+#include "Texture.h"
 
 class height_map : public core
 {
@@ -13,8 +14,12 @@ public:
     void render() override;
 
 private:
-    shader floor_shader;
-    vao floor;
+    void create_mesh();
 
-    const float floor_size = 100.0f;
+private:
+    shader height_map_shader;
+    vao floor;
+    texture height_map_texture;
+
+    const size_t floor_size = 100;
 };

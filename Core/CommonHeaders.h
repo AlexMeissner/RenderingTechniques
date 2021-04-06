@@ -16,5 +16,6 @@
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtx/rotate_vector.hpp>
+#include <SOIL/SOIL.h>
 
 namespace fs = std::filesystem;
